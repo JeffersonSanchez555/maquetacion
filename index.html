@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Top 10 Tecnologías y Lenguajes de Programación</title>
 
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -20,19 +18,56 @@
             font-family: system-ui, -apple-system, sans-serif;
         }
 
-        
-        .caja1  { background-color: #ff0000; } 
-        .caja2  { background-color: #0055ff; } 
-        .caja3  { background-color: #ffcc00; } 
-        .caja4  { background-color: #ff6600; } 
-        .caja5  { background-color: #009933; } 
-        .caja6  { background-color: #8800cc; } 
-        .caja7  { background-color: #ff0066; } 
-        .caja8  { background-color: #00ccff; } 
-        .caja9  { background-color: #ccff00; } 
-        .caja10 { background-color: #ccff00; } 
+        .card-tech {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #161b26;
+        }
 
-        
+        .card-tech:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .card-img-container {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card-tech:hover .card-img-container img {
+            transform: scale(1.08);
+        }
+
+        .card-overlay-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+        }
+
+        .caja1  { border-top: 4px solid #ff0000; } 
+        .caja2  { border-top: 4px solid #0055ff; } 
+        .caja3  { border-top: 4px solid #ffcc00; } 
+        .caja4  { border-top: 4px solid #ff6600; } 
+        .caja5  { border-top: 4px solid #009933; } 
+        .caja6  { border-top: 4px solid #8800cc; } 
+        .caja7  { border-top: 4px solid #ff0066; } 
+        .caja8  { border-top: 4px solid #00ccff; } 
+        .caja9  { border-top: 4px solid #ccff00; } 
+        .caja10 { border-top: 4px solid #00ffaa; } 
+
         .carousel-item {
             height: 380px;
         }
@@ -49,123 +84,60 @@
             border-radius: 10px;
             padding: 15px;
         }
-
-        
-        .caja-imagen {
-            height: 280px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        .caja-imagen img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        
-        .caja-texto {
-            height: 280px;
-            border-radius: 12px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.25);
-        }
-
-        .text-side {
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
     </style>
 </head>
 
 <body>
 
-    
-    <header class="container pt-3">
-        <div class="text-center mb-3">
-            <h1 class="fw-bold"><i class="fa-solid fa-code me-2"></i>Top 10 Lenguajes y Tecnologías de Desarrollo</h1>
-            <p class="text-muted m-0">Carrusel interactivo en encabezado</p>
+    <header class="container pt-4 mb-5">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold"><i class="fa-solid fa-code me-2 text-primary"></i>Top 10 Lenguajes y Tecnologías</h1>
+            <p class="text-muted m-0">Explora las herramientas más populares en el desarrollo de software</p>
         </div>
 
-        <div id="headerCarousel" class="carousel slide rounded overflow-hidden shadow-lg" data-bs-ride="carousel">
+        <div id="headerCarousel" class="carousel slide rounded-4 overflow-hidden shadow-lg" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="2"></button>
                 <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="3"></button>
                 <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="4"></button>
-                <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="5"></button>
-                <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="6"></button>
-                <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="7"></button>
-                <button type="button" data-bs-target="#headerCarousel" data-bs-slide-to="8"></button>
             </div>
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=1200&auto=format&fit=crop" class="d-block w-100" alt="JavaScript">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>1. JavaScript</h5>
+                        <p>El lenguaje fundamental e imprescindible de la Web.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
                     <img src="https://beecrowd.com/wp-content/uploads/2024/04/2022-07-19-Melhores-cursos-de-Python.jpg" class="d-block w-100" alt="Python">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>2. Python</h5>
-                        <p>Lenguaje versátil enfocado en Inteligencia Artificial, Ciencia de Datos y Desarrollo Web Backend.</p>
+                        <p>Líder en Inteligencia Artificial, Ciencia de Datos y Backend.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop" class="d-block w-100" alt="React">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>3. React</h5>
-                        <p>Biblioteca declarativa para la creación de interfaces de usuario interactivas basadas en componentes.</p>
+                        <p>Librería moderna para la construcción de interfaces dinámicas.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop" class="d-block w-100" alt="Node.js">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>4. Node.js</h5>
-                        <p>Entorno de ejecución orientado a eventos para construir servidores backend eficientes en JavaScript.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://blog.teamtreehouse.com/wp-content/uploads/2026/03/Treehouse-4.jpg" class="d-block w-100" alt="TypeScript">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>5. TypeScript</h5>
-                        <p>Superset de JavaScript que añade tipado estático para la construcción de software a gran escala.</p>
+                        <p>Entorno de ejecución asíncrono para servidores escalables.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&auto=format&fit=crop" class="d-block w-100" alt="Java">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>6. Java</h5>
-                        <p>Lenguaje robusto orientado a objetos utilizado en arquitectura empresarial y sistemas Android.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://cdn-blog.superprof.com/blog_es/wp-content/uploads/2019/04/agregar-imagen-php.jpg" class="d-block w-100" alt="PHP">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>7. PHP</h5>
-                        <p>Lenguaje de programación del lado del servidor fundamental para la web dinámica y gestores de contenido.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://msmk.university/wp-content/uploads/2025/05/programacionc.webp" class="d-block w-100" alt="C++">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>8. C++</h5>
-                        <p>Lenguaje de alto rendimiento ideal para sistemas operativos, motores gráficos y software embebido.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtNdF6R8ARSVZ86QpgM8wzIH7f0MwSrhUZw8j2ae9lOw&s=10" class="d-block w-100" alt="MySQL">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>9. MySQL</h5>
-                        <p>Sistema de gestión de bases de datos relacionales clave para la estructuración y persistencia de datos.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq976EYWZYjOlFHlNuhZPSpOQPthgFbQv_jud106UWDA&s=10" class="d-block w-100" alt="Git">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>10. Git & GitHub</h5>
-                        <p>Sistema de control de versiones distribuido indispensable para la colaboración y flujo DevOps.</p>
+                        <p>Plataforma robusta para desarrollo empresarial y Android.</p>
                     </div>
                 </div>
             </div>
@@ -179,206 +151,185 @@
         </div>
     </header>
 
-    
-    <main class="container my-4">
+    <main class="container my-4 pb-5">
         <div class="row g-4">
 
-            
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800&auto=format&fit=crop" alt="JavaScript">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja1 caja-texto">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">1. JavaScript</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja1 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800&auto=format&fit=crop" alt="JavaScript">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold">1. JavaScript</h3>
+                        </div>
                     </div>
-                    <p class="m-0">JavaScript es el lenguaje de programación fundamental e imprescindible de la Web. Permite dotar de dinamismo e interactividad a las páginas web mediante la manipulación del DOM, el manejo de eventos en tiempo real y el consumo de APIs asíncronas. Gracias a motores modernos como V8 y su evolución al lado del servidor, se ha consolidado como un estándar multiparadigma en la industria del desarrollo de software.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Permite dotar de dinamismo e interactividad a las páginas web mediante la manipulación del DOM, eventos en tiempo real y APIs asíncronas.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-danger btn-sm rounded-pill px-3"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-danger btn-sm rounded-circle"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://beecrowd.com/wp-content/uploads/2024/04/2022-07-19-Melhores-cursos-de-Python.jpg" alt="Python">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja2 caja-texto">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">2. Python</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja2 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://beecrowd.com/wp-content/uploads/2024/04/2022-07-19-Melhores-cursos-de-Python.jpg" alt="Python">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold">2. Python</h3>
+                        </div>
                     </div>
-                    <p class="m-0">Python destaca por su sintaxis limpia, legible y altamente expresiva, diseñada para optimizar la productividad del desarrollador. Es ampliamente adoptado en inteligencia artificial, aprendizaje automático, ciencia de datos, automatización de scripts y desarrollo backend con frameworks ligeros como Flask o robustos como Django, convirtiéndolo en un pilar esencial del ecosistema tecnológico moderno.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Sintaxis limpia y expresiva. Ampliamente adoptado en IA, aprendizaje automático, ciencia de datos y desarrollo backend con Flask y Django.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-3"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-primary btn-sm rounded-circle"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop" alt="React">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja3 caja-texto text-dark">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">3. React</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja3 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop" alt="React">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold text-warning">3. React</h3>
+                        </div>
                     </div>
-                    <p class="m-0">React es la librería de JavaScript más popular para el diseño de interfaces de usuario SPA (Single Page Applications). Basada en una arquitectura de componentes reutilizables, un DOM Virtual para renderizado eficiente y un flujo de datos unidireccional, permite construir aplicaciones web escalables, interactivas y mantenibles con altos estándares de calidad gráfica.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Librería de JavaScript para interfaces SPA. Basada en componentes reutilizables, DOM Virtual y flujo de datos unidireccional.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-warning btn-sm rounded-circle text-dark"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-           
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop" alt="Node.js">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja4 caja-texto">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">4. Node.js</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja4 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop" alt="Node.js">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold">4. Node.js</h3>
+                        </div>
                     </div>
-                    <p class="m-0">Node.js revolucionó el desarrollo web al permitir ejecutar JavaScript directamente en el servidor. Gracias a su modelo de E/S sin bloqueo y orientado a eventos (Event Loop), resulta idóneo para la creación de arquitecturas de microservicios, APIs RESTful, servicios web en tiempo real con WebSockets y aplicaciones de alta concurrencia con un consumo óptimo de recursos.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Ejecuta JavaScript en el servidor. Su modelo orientados a eventos (Event Loop) lo hace idóneo para microservicios y APIs RESTful.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3 text-white"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-warning btn-sm rounded-circle text-dark"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-           
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://blog.teamtreehouse.com/wp-content/uploads/2026/03/Treehouse-4.jpg" alt="TypeScript">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja5 caja-texto">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">5. TypeScript</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja5 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://blog.teamtreehouse.com/wp-content/uploads/2026/03/Treehouse-4.jpg" alt="TypeScript">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold">5. TypeScript</h3>
+                        </div>
                     </div>
-                    <p class="m-0">TypeScript extiende la funcionalidad de JavaScript agregando un sistema de tipado estático opcional y características avanzadas de orientación a objetos. Facilita la detección temprana de errores en tiempo de compilación, mejora significativamente la autocompletación en editores como VS Code y optimiza la refactorización en proyectos de código de gran envergadura.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Superset de JavaScript que añade tipado estático opcional y POO avanzada, optimizando proyectos de gran escala.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-success btn-sm rounded-pill px-3"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-success btn-sm rounded-circle"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop" alt="Java">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja6 caja-texto">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">6. Java</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja6 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop" alt="Java">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold">6. Java</h3>
+                        </div>
                     </div>
-                    <p class="m-0">Java se mantiene como un referente de estabilidad y portabilidad bajo la premisa de "escribe una vez, ejecútalo en cualquier lugar". Mediante la máquina virtual de Java (JVM), alimenta plataformas de banca, sistemas transaccionales a gran escala, aplicaciones empresariales con Spring Boot y el desarrollo nativo móvil en el ecosistema Android.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Referente de estabilidad y portabilidad bajo la JVM. Alimenta sistemas bancarios, empresariales con Spring Boot y Android.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-info btn-sm rounded-pill px-3 text-white"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-info btn-sm rounded-circle text-white"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://cdn-blog.superprof.com/blog_es/wp-content/uploads/2019/04/agregar-imagen-php.jpg" alt="PHP">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja7 caja-texto">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">7. PHP</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja7 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://cdn-blog.superprof.com/blog_es/wp-content/uploads/2019/04/agregar-imagen-php.jpg" alt="PHP">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold">7. PHP</h3>
+                        </div>
                     </div>
-                    <p class="m-0">PHP es uno de los lenguajes del lado del servidor más consolidados para la generación de páginas web dinámicas. Impulsa un porcentaje mayoritario de la web global gracias a su integración nativa con bases de datos SQL y plataformas CMS masivas como WordPress, así como frameworks modernos como Laravel que ofrecen una arquitectura organizada y segura.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Lenguaje del lado del servidor fundamental para la web dinámica. Base de gestores de contenido como WordPress y frameworks como Laravel.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-danger btn-sm rounded-pill px-3"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-danger btn-sm rounded-circle"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://msmk.university/wp-content/uploads/2025/05/programacionc.webp" alt="C++">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja8 caja-texto text-dark">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">8. C++</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja8 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://msmk.university/wp-content/uploads/2025/05/programacionc.webp" alt="C++">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold">8. C++</h3>
+                        </div>
                     </div>
-                    <p class="m-0">C++ proporciona un control preciso sobre la memoria del sistema y los recursos de hardware, combinando abstracciones de alto nivel con características de bajo nivel. Es la elección preferida para el desarrollo de sistemas operativos, motores de renderizado 3D, software de simulación científica y sistemas críticos donde la latencia baja y el rendimiento extremo son indispensables.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Ofrece control preciso sobre la memoria. Es la elección preferida para motores gráficos 3D, sistemas operativos y software embebido.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-info btn-sm rounded-pill px-3"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-info btn-sm rounded-circle text-white"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtNdF6R8ARSVZ86QpgM8wzIH7f0MwSrhUZw8j2ae9lOw&s=10" alt="MySQL">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja9 caja-texto text-dark">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">9. MySQL</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-tech caja9 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtNdF6R8ARSVZ86QpgM8wzIH7f0MwSrhUZw8j2ae9lOw&s=10" alt="MySQL">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold text-success">9. MySQL</h3>
+                        </div>
                     </div>
-                    <p class="m-0">MySQL es uno de los sistemas relacionales de gestión de bases de datos (RDBMS) más extendidos en la ingeniería de software. Utiliza SQL para consultar, insertar y estructurar datos de forma segura e íntegra. Su capacidad para manejar transacciones ACID y grandes volúmenes de datos lo posiciona como la capa de almacenamiento principal en proyectos de producción.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Sistema RDBMS esencial para estructuración y persistencia de datos relacionales garantizando transacciones ACID integras.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-success btn-sm rounded-pill px-3"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-success btn-sm rounded-circle"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
-            <div class="col-md-5">
-                <div class="caja-imagen">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq976EYWZYjOlFHlNuhZPSpOQPthgFbQv_jud106UWDA&s=10" alt="Git">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="caja10 caja-texto text-dark">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <span class="text-side">------</span>
-                        <h3 class="m-0 fw-bold">10. Git & GitHub</h3>
-                        <span class="text-side">------</span>
+            <div class="col-md-6 col-lg-4 mx-auto">
+                <div class="card card-tech caja10 h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq976EYWZYjOlFHlNuhZPSpOQPthgFbQv_jud106UWDA&s=10" alt="Git">
+                        <div class="card-overlay-title">
+                            <h3 class="m-0 fw-bold">10. Git & GitHub</h3>
+                        </div>
                     </div>
-                    <p class="m-0">Git es el estándar de la industria para el control de versiones distribuido, permitiendo rastrear cambios en el código, gestionar ramas de trabajo y colaborar sin interferencias. Junto con plataformas como GitHub, facilita la integración continua (CI/CD), la revisión de código mediante Pull Requests y el almacenamiento centralizado de repositorios de software.</p>
-                    <div class="text-end">
-                        <span class="text-side">------</span>
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <p class="card-text">Sistema de control de versiones distribuido clave para el rastreo de cambios, ramificación del código y flujos DevOps integrados.</p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                            <a href="#" class="btn btn-outline-light btn-sm rounded-pill px-3"><i class="fa-solid fa-book-open me-1"></i> Leer más</a>
+                            <button class="btn btn-light btn-sm rounded-circle"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -386,7 +337,6 @@
         </div>
     </main>
 
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
